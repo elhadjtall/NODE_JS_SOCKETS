@@ -24,3 +24,118 @@ body {
   border-radius: 24px;
   overflow: hidden;
 }
+
+.name {
+  display: flex;
+  font-size: 32px;
+  font-weight: bold;
+  padding: 8px 16px;
+  color: #0f0e0e;
+  background-color: #ebebeb;
+}
+
+.name span {
+  color: #bbb;
+}
+
+.nameForm {
+  display: flex;
+}
+
+.nameInput {
+  font-size: 24px;
+  font-weight: bold;
+  color: #7e7e7e ;
+  border: none;
+  outline: none;
+  margin: 0 12px;
+  background-color: #ebebeb;
+}
+.conversation {
+  background-color: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 400px;
+}
+.messageLeft, .messageRight {
+  list-style: none;
+  margin: 12px;
+  color: #121111;
+  word-wrap: break-word;
+  border-radius: 16px;
+  padding: 8px 12px;
+}
+
+.messageLeft {
+  background-color: #ebebeb;
+  align-self: flex-start;
+  box-shadow: 2px 2px 5px #ebebeb;
+}
+.messageRight {
+  background-color: #7067ec;
+  align-self: flex-end;
+  box-shadow: 2px 2px 5px #7067ec;
+}
+.messageLeft span, .messageRight span {
+  font-style: italic;
+  margin-top: 4px;
+  font-size: 12px;
+}
+
+.message {
+  margin: 5px 0;
+}
+
+.messageFeedback {
+  list-style: none;
+}
+
+.feedback {
+  font-style: italic;
+  margin: 0;
+  font-size: 14px;
+  color: #2d2d2D;
+  text-align: center;
+}
+
+.messageForm {
+  padding: 8px 16px;
+  display: flex;
+  background-color: #ebebeb;
+}
+
+.messageInput {
+  flex-grow: 1;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  padding: 10px 12px;
+  background-color: #e6e2e2;
+}
+
+.sendButton {
+  border: none;
+  background-color: #5e56ed;
+  color: #7e7e7e;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.vDivider {
+  width: 2px;
+  height: 48px;
+  background-color: #f3f0f0;
+}
+
+.sendButton:hover {
+  background-color: #4f35e6;
+}
+
+.messageButton {
+  border: none;
+  background-color: #5e56ed;
+  font-size: 16px;
+  border-radius: 10px ;
+}

@@ -18,8 +18,7 @@ function App() {
             maxLength="20"/>
           </span>
         </div>
-        <div className="conversation">
-          <ul>
+        <ul className="conversation">
             <li className='messageLeft'>
               <p className='message'>Bonjour les amis</p>
               <span>author - 18 Juin 2024</span>
@@ -31,8 +30,7 @@ function App() {
             <li className='messageFeedback'>
               <p className='feedback'>Toto is typing...</p>
             </li>
-          </ul>
-        </div>
+        </ul>
         <form className="messageForm">
           <input type="text" className="messageInput" 
           id="messageInput" 
