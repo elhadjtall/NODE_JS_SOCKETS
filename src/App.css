@@ -115,27 +115,16 @@ body {
   background-color: #e6e2e2;
 }
 
-.sendButton {
-  border: none;
-  background-color: #5e56ed;
-  color: #7e7e7e;
-  font-size: 32px;
-  cursor: pointer;
-}
-
 .vDivider {
   width: 2px;
   height: 48px;
   background-color: #f3f0f0;
 }
-
-.sendButton:hover {
-  background-color: #4f35e6;
+.sendButton {
+  background-color: white;
+  border: 0;
 }
 
-.messageButton {
-  border: none;
-  background-color: #5e56ed;
-  font-size: 16px;
-  border-radius: 10px ;
+.sendButton:hover {
+  background-color: #624be4;
 }

@@ -37,7 +37,7 @@ function App() {
           value=""
           maxLength="100"/>
           <div className="vDivider"></div>
-          <button type="submit" className="messageButton">Send<FontAwesomeIcon icon={faPaperPlane}/></button>
+          <button type="submit" className="sendButton">Send<FontAwesomeIcon icon={faPaperPlane}/></button>
         </form>
 
       </div>
