@@ -1,6 +1,6 @@
 import './App.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser } from '@fortawesome/free-solid-svg-icons';
+import { faPaperPlane, faUser } from '@fortawesome/free-solid-svg-icons';
 
 function App() {
   
@@ -18,8 +18,29 @@ function App() {
             maxLength="20"/>
           </span>
         </div>
-        <div className="conversation"></div>
-        <form className="messageForm"></form>
+        <div className="conversation">
+          <ul>
+            <li className='messageLeft'>
+              <p className='message'>Bonjour les amis</p>
+              <span>author - 18 Juin 2024</span>
+            </li>
+            <li className='messageRight'>
+              <p className='message'>Ca va?</p>
+              <span>author - 18 Juin 2024</span>
+            </li>
+            <li className='messageFeedback'>
+              <p className='feedback'>Toto is typing...</p>
+            </li>
+          </ul>
+        </div>
+        <form className="messageForm">
+          <input type="text" className="messageInput" 
+          id="messageInput" 
+          value=""
+          maxLength="100"/>
+          <div className="vDivider"></div>
+          <button type="submit" className="messageButton">Send<FontAwesomeIcon icon={faPaperPlane}/></button>
+        </form>
 
       </div>
     </>
