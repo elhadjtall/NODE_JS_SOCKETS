@@ -1,9 +1,25 @@
 import './App.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaperPlane, faUser } from '@fortawesome/free-solid-svg-icons';
+import { useState } from 'react';
 
 function App() {
-  
+
+  // On declare deux state donc l'équivalent des variables, qui me permettront de conserver, 
+  // le name ainsi que le message
+  const [name, setName] = useState('anonymous');
+  const [message, setMessages] = useState('');
+
+  // On creer une fonction qui va permettre de changer le nom de l'utilisateur
+  const handleNameChange = (e) => {
+    // On appelle la valeur du name de l'input
+    setName(e.target.value); // Ici on prend la valeur de l'input qui vient d'être modifier, et utiliser
+  } 
+
+  // On creer une fonction qui va permettre de changer le message
+  const handleMessageChange = (e) => {
+    setMessages(e.target.value); // Ici on prend la valeur de l'input qui vient d'étre modifier, et utiliser
+  }
 
   return (
     <>
@@ -14,8 +30,8 @@ function App() {
             <FontAwesomeIcon icon={faUser}/>
             <input type="text" className="nameInput" 
             id="nameInput" 
-            value=""
-            maxLength="20"/>
+            value={name}
+            onChange={handleNameChange}/>
           </span>
         </div>
         <ul className="conversation">
@@ -34,8 +50,8 @@ function App() {
         <form className="messageForm">
           <input type="text" className="messageInput" 
           id="messageInput" 
-          value=""
-          maxLength="100"/>
+          value={message}
+          onChange={handleMessageChange}/>
           <div className="vDivider"></div>
           <button type="submit" className="sendButton">Send<FontAwesomeIcon icon={faPaperPlane}/></button>
         </form>
