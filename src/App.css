@@ -130,3 +130,43 @@ body {
 .sendButton:hover {
   background-color: #624be4;
 }
+
+.sendButton:active {
+  background-color: #624be4;
+}
+
+.sendButton:focus {
+  outline: none;
+}
+.flex {
+  display: flex;
+}
+
+.userList {
+  padding: 1em 2em;
+}
+.userList ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.userList li {
+  margin: 10px;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.userList li:hover {
+  background-color: #a2a2ac;
+}
+
+.userList li:active {
+  color: #7067ec;
+}
+
+.userList li:focus {
+  outline: none;
+}
+

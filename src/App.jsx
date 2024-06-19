@@ -23,41 +23,59 @@ function App() {
 
   return (
     <>
-      <h1 className='title'>ichat</h1>
-      <div className="mainChat">
-        <div className="name">
-          <span>
-            <FontAwesomeIcon icon={faUser}/>
-            <input type="text" className="nameInput" 
-            id="nameInput" 
-            value={name}
-            onChange={handleNameChange}/>
+    <h1 className='title'>iChat</h1>
+    <div className="mainChat">
+      <div className="flex">
+        <div className="userList">
+          <h3>Users : 0</h3>
+          <ul>
+            <li>All</li>
+            <li>Toto</li>
+            <li>Bob</li>
+            <li>Alice</li>
+          </ul>
+        </div>
+        <div className="chat">
+          <div className="name">
+          <span className="nameForm">
+            <FontAwesomeIcon icon={faUser} />
+            <input type="text"
+              className="nameInput"
+              id="nameInput"
+              value={name}
+              onChange={handleNameChange}
+              maxLength="20"
+            />
           </span>
         </div>
         <ul className="conversation">
-            <li className='messageLeft'>
-              <p className='message'>Bonjour les amis</p>
-              <span>author - 18 Juin 2024</span>
-            </li>
-            <li className='messageRight'>
-              <p className='message'>Ca va?</p>
-              <span>author - 18 Juin 2024</span>
-            </li>
-            <li className='messageFeedback'>
-              <p className='feedback'>Toto is typing...</p>
-            </li>
+          <li className="messageLeft">
+            <p className="message">Bonjour tout le monde !</p>
+            <span>author - 18 juin 2024</span>
+          </li>
+          <li className="messageRight">
+            <p className="message">Ca va?</p>
+            <span>author - 18 juin 2024</span>
+          </li>
+          <li className="messageFeedback">
+            <p className="feedback">Toto is typing...</p>
+          </li>
         </ul>
         <form className="messageForm">
-          <input type="text" className="messageInput" 
-          id="messageInput" 
-          value={message}
-          onChange={handleMessageChange}/>
+          <input type="text" 
+            name="message" 
+            className='messageInput' 
+            value={message}
+            onChange={handleMessageChange} 
+          />
           <div className="vDivider"></div>
-          <button type="submit" className="sendButton">Send<FontAwesomeIcon icon={faPaperPlane}/></button>
+          <button type="submit" className='sendButton'>Send <FontAwesomeIcon icon={faPaperPlane}/></button>
         </form>
-
+        </div>
       </div>
-    </>
+
+    </div>
+  </>
   )
 }
 
