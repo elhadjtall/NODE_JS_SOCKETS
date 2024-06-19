@@ -1,7 +1,10 @@
 import './App.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaperPlane, faUser } from '@fortawesome/free-solid-svg-icons';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { io } from 'socket.io-client';
+
+const socket = io('http://localhost:3000');
 
 function App() {
 
@@ -9,6 +12,14 @@ function App() {
   // le name ainsi que le message
   const [name, setName] = useState('anonymous');
   const [message, setMessages] = useState('');
+  const [usersCount, setUsersCount] = useState(0);
+
+  // On creer 
+  useEffect(() => {
+    socket.on('userCount', (userTotal) => {
+      setUsersCount(userTotal);
+    })
+  }, [])
 
   // On creer une fonction qui va permettre de changer le nom de l'utilisateur
   const handleNameChange = (e) => {
@@ -27,7 +38,7 @@ function App() {
     <div className="mainChat">
       <div className="flex">
         <div className="userList">
-          <h3>Users : 0</h3>
+          <h3>Users : {usersCount}</h3>
           <ul>
             <li>All</li>
             <li>Toto</li>
